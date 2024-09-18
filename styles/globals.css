@@ -25,3 +25,43 @@ body {
     text-wrap: balance;
   }
 }
+
+ /* hamburger icon animation */
+.hamb {
+  @apply relative mr-[-0.625rem] bg-transparent p-0;
+}
+.hamb .ham {
+  @apply h-16 w-16 cursor-pointer transition-all duration-300;
+}
+.hamb .line {
+  fill: none;
+  stroke: black;
+  stroke-width: 5;
+  stroke-linecap: round;
+  @apply transition-all duration-300;
+}
+.hamb .ham .top {
+  stroke-dasharray: 40 160;
+}
+.hamb .ham .middle {
+  transform-origin: 50%;
+  stroke-dasharray: 40 142;
+}
+.hamb .ham .bottom {
+  transform-origin: 50%;
+  stroke-dasharray: 40 85;
+}
+.hamb.active .ham {
+  transform: rotate(45deg);
+}
+.hamb.active .ham .top {
+  stroke-dashoffset: -64px;
+}
+.hamb.active .ham .middle {
+  transform: rotate(90deg);
+}
+.hamb.active .ham .bottom {
+  stroke-dashoffset: -64px;
+}
+
+ /* hamburger icon animation */
