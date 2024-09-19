@@ -1,14 +1,11 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
 
-export default function HamburgerIcon() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function HamburgerIcon({ toggleSidebar, sidebar }) {
 
   return (
     <button
-      className={`hamb ${isOpen ? 'active' : ''}`}
+      className={`hamb ${sidebar ? 'active' : ''}`}
       aria-label="Open Menu"
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={toggleSidebar}
     >
       <span className="sr-only">Open Menu</span>
       <svg className="ham" viewBox="0 0 100 100">
