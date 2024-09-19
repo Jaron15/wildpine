@@ -3,6 +3,7 @@ import { BellIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import HamburgerIcon from './HamburgerIcon'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function NavBar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -53,14 +54,22 @@ export default function NavBar() {
                 </a>
               </div>
             </div>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button
-                type="button"
-                className="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                <span className="sr-only">View notifications</span>
-                <BellIcon aria-hidden="true" className="h-6 w-6" />
-              </button>
+            <div className="absolute  inset-y-0 right-0 flex items-center pr-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <button
+  type="button"
+  className="relative rounded-full  pb-1 text-gray-400 hover:text-gray-500 "
+>
+  <span className="sr-only">Company Logo</span>
+  
+  <div className="relative h-20 w-20 ">  
+    <Image
+      src="/wildpinelogo.svg" 
+      alt="Company Logo"
+      fill  
+      objectFit="contain"
+    />
+  </div>
+</button>
             </div>
           </div>
         </div>
