@@ -12,7 +12,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Disclosure as="nav" className="sticky top-0 z-20 bg-white shadow">
+      <Disclosure as="nav" className="sticky top-0 z-20 bg-gradient-to-r from-[#5A4033] to-[#F2D9B1] shadow">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -20,13 +20,30 @@ export default function NavBar() {
               <HamburgerIcon toggleSidebar={toggleSidebar} sidebar={isSidebarOpen} />
             </div>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div className="flex flex-shrink-0 items-center">
-                <img
-                  alt="Your Company"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
-                />
-              </div>
+             {/* Neon Coffee Shop Name in Center */}
+            <div className="flex flex-none items-center justify-center  sm:justify-start">
+            <motion.h1
+  className="font-sacramento text-[calc(16px+2vw)] sm:text-xl leading-[calc(20px+2vh)] text-center text-[#ffb6c1] shadow-none font-bold mt-2 mr-2"
+  style={{
+    textShadow: '0 0 5px #ff1493, 0 0 20px #ff1493, 0 0 30px #c71585, 0 0 40px #c71585, 0 0 60px #8b008b, 0 0 80px #8b008b'
+  }}
+  
+
+  initial={{ opacity: 0 }}  // Start from invisible
+  animate={{ 
+    opacity: [0, 1, 0.5, 1, 0.7, 1]  // Flicker pattern
+  }}
+  transition={{
+    duration: 2,  // Flickering lasts for 2 seconds
+    times: [0, 0.2, 0.4, 0.6, 0.8, 1],  // Control the flicker timing
+    ease: "easeInOut",  // Smooth transition
+  }}
+
+>
+  Wild Pine Coffee
+</motion.h1>
+            </div>
+
               <div className="hidden sm:justify-center sm:flex sm:flex-1 sm:space-x-8 ">
                 <a
                   href="#"
