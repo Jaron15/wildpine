@@ -12,7 +12,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Disclosure as="nav" className="sticky top-0 z-20 bg-gradient-to-r from-[#5A4033] to-[#F2D9B1] shadow">
+      <Disclosure as="nav" className="sticky top-0 z-20 bg-gradient-to-r from-[#5A4033] to-[#F2D9B1] shadow overflow-clip">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -127,29 +127,22 @@ export default function NavBar() {
 
       {/* Sidebar */}
       <motion.div
-        initial={{ x: '-100%' }}
-        animate={{ x: isSidebarOpen ? '0%' : '-100%' }}
-        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className="fixed top-0 left-0 h-full bg-gray-800 text-white z-10"
-        style={{ width: '80%' }}
-      >
-        <button
-          className="absolute top-5 right-5 text-white"
-          onClick={toggleSidebar}
-        >
-          Close
-        </button>
-
-        <div className="p-4">
-          <h2 className="text-xl mb-4">Menu</h2>
-          <ul>
-            <li className="mb-2">Home</li>
-            <li className="mb-2">About</li>
-            <li className="mb-2">Services</li>
-            <li className="mb-2">Contact</li>
-          </ul>
-        </div>
-      </motion.div>
+  initial={{ x: '-100%' }}
+  animate={{ x: isSidebarOpen ? '0%' : '-100%' }}
+  transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+  className="fixed top-0 left-0 h-full bg-white text-black z-10"
+  style={{ width: '80%' }}
+>
+  <div className="p-4 text-3xl flex flex-col justify-start w-full h-full items-center pt-28">
+    <ul className="space-y-10 text-center">
+      <li className="mb-2">Home</li>
+      <li className="mb-2">Menu</li>
+      <li className="mb-2">About us</li>
+      <li className="mb-2">Contact</li>
+    </ul>
+    <div className="border-t border-gray-400 w-5/6 mt-6"></div>
+  </div>
+</motion.div>
 
       {/* Overlay */}
       {isSidebarOpen && (
