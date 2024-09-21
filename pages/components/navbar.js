@@ -12,7 +12,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Disclosure as="nav" className="sticky top-0 z-20 bg-gradient-to-r from-[#5A4033] to-[#F2D9B1] shadow overflow-clip">
+      <Disclosure as="nav" className="sticky top-0 z-50 bg-gradient-to-r from-[#5A4033] to-[#F2D9B1] shadow overflow-clip">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -130,7 +130,7 @@ export default function NavBar() {
   initial={{ x: '-100%' }}
   animate={{ x: isSidebarOpen ? '0%' : '-100%' }}
   transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-  className="fixed top-0 left-0 h-full bg-white text-black z-10"
+  className="fixed top-0 left-0 h-full bg-white text-black z-40"
   style={{ width: '80%' }}
 >
   <div className="p-4 text-3xl flex flex-col justify-start w-full h-full items-center pt-28">
@@ -150,7 +150,7 @@ export default function NavBar() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black z-0"
+          className="fixed inset-0 bg-black z-30"
           onClick={toggleSidebar}
         />
       )}
