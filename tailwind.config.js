@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         sacramento: ['Sacramento', 'cursive'],
+        satisfy: ['Satisfy', 'cursive'],
       }
     },
   },

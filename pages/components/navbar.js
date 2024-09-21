@@ -23,7 +23,7 @@ export default function NavBar() {
              {/* Neon Coffee Shop Name in Center */}
             <div className="flex flex-none items-center justify-center  sm:justify-start">
             <motion.h1
-  className="font-sacramento text-[calc(16px+2vw)] sm:text-xl leading-[calc(20px+2vh)] text-center text-[#ffb6c1] shadow-none font-bold mt-2 mr-2"
+  className="font-satisfy text-[calc(16px+2vw)] sm:text-xl leading-[calc(20px+2vh)] text-center text-[#ffb6c1] shadow-none  mt-2 mr-2"
   style={{
     textShadow: '0 0 5px #ff1493, 0 0 20px #ff1493, 0 0 30px #c71585, 0 0 40px #c71585, 0 0 60px #8b008b, 0 0 80px #8b008b'
   }}
@@ -40,32 +40,32 @@ export default function NavBar() {
   }}
 
 >
-  Wild Pine Coffee
+  Wild Pine Coffee Co
 </motion.h1>
             </div>
 
               <div className="hidden sm:justify-center sm:flex sm:flex-1 sm:space-x-8 ">
                 <a
                   href="#"
-                  className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                  className="inline-flex items-center hover:border-b-2 border-black px-1 pt-1 text-sm font-medium text-white"
                 >
                   Dashboard
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
                 >
                   Team
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
                 >
                   Projects
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
                 >
                   Calendar
                 </a>
