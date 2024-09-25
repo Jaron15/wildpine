@@ -1,18 +1,21 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { useContext } from 'react';
+import { ScrollContext } from './ScrollContext';
 import { BellIcon } from '@heroicons/react/24/outline'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import HamburgerIcon from './HamburgerIcon'
 import { useState } from 'react'
 import Image from 'next/image'
 
 export default function NavBar() {
+  const { isHeroInView } = useContext(ScrollContext);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
     <>
-      <Disclosure as="nav" className="sticky top-0 z-50 bg-gradient-to-r from-[#5A4033] to-[#F2D9B1] shadow overflow-clip">
+      <Disclosure as="nav" className="sticky top-0 z-50 bg-gradient-to-r from-[#5A4033]  to-[#F2D9B1] shadow overflow-clip">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -72,21 +75,28 @@ export default function NavBar() {
               </div>
             </div>
             <div className="absolute  inset-y-0 right-0 flex items-center pr-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button
-  type="button"
-  className="relative rounded-full  pb-1 text-gray-400 hover:text-gray-500 "
->
-  <span className="sr-only">Company Logo</span>
-  
-  <div className="relative h-20 w-20 ">  
-    <Image
-      src="/wildpinelogo.svg" 
-      alt="Company Logo"
-      fill  
-      objectFit="contain"
-    />
-  </div>
-</button>
+            <AnimatePresence>
+  {!isHeroInView && (
+    <motion.button
+      key="navbar-logo"
+      type="button"
+      className="relative rounded-full pb-1 text-gray-400 hover:text-gray-500"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div className="relative h-20 w-20">
+        <Image
+          src="/wildpinelogo.svg"
+          alt="Company Logo"
+          fill
+          objectFit="contain"
+        />
+      </div>
+    </motion.button>
+  )}
+</AnimatePresence>
             </div>
           </div>
         </div>
