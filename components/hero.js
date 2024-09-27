@@ -47,7 +47,7 @@ export default function Hero() {
 
           {/* Text Content */}
           <div className="text-center sm:text-left">
-            <h1 className="text-2xl sm:text-4xl font-bold">Your Title Here</h1>
+            <h1 className="text-2xl sm:text-4xl font-bold">Wild Pine Coffee Co</h1>
             <p className="mt-2 text-base sm:text-lg">Your description goes here.</p>
           </div>
         </div>
