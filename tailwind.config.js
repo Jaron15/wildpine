@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '425px', // Custom breakpoint for 361px
+        xxs: '376px', // Custom breakpoint for 361px
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

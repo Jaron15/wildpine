@@ -2,10 +2,10 @@ import React from 'react';
 
 function Card({key, title, description}) {
   return (
-    <div className="w-[15vh] sm:w-[23vh] lg:w-[35vh] xl:w-[40vh] bg-white border border-[#6B705C] rounded-lg shadow dark:bg-gray-800 dark:border-[#6B705C] h-[27vh] sm:h-[38vh] lg:h-[60vh] flex flex-col">
+    <div className="w-[15vh] sm:w-[21vh] md:w-[21vh] lg:w-[33vh] xl:w-[35vh] bg-white border border-[#6B705C] rounded-lg shadow dark:bg-gray-800 dark:border-[#6B705C] h-[27vh] sm:h-[36vh] lg:h-[55vh] flex flex-col overflow-clip">
     
         {/* Set height as a percentage of the card */}
-        <div className="h-[80%] sm:h-[70%]">
+        <div className="h-[80%] sm:h-[75%] xl:h-[80%]">
           <img className="rounded-t-lg object-cover w-full h-full object-bottom" src={`/${title}.webp`} alt="Coffee Image" />
         </div>
      
