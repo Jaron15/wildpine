@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card({key, title, description}) {
   return (
-    <div className="w-[15vh] sm:w-[21vh] md:w-[21vh] lg:w-[33vh] xl:w-[35vh] bg-white border border-[#6B705C] rounded-lg shadow dark:bg-gray-800 dark:border-[#6B705C] h-[27vh] sm:h-[36vh] lg:h-[55vh] flex flex-col overflow-clip">
+    <div className="w-[15vh] sm:w-[21vh] md:w-[21vh] lg:w-[33vh] xl:w-[35vh] bg-white border border-[#6B705C] rounded-lg shadow dark:bg-gray-800 dark:border-[#6B705C] h-[27vh] sm:h-[36vh] lg:h-[55vh] flex flex-col overflow-clip font-sans">
     
         {/* Set height as a percentage of the card */}
         <div className="h-[80%] sm:h-[75%] xl:h-[80%]">

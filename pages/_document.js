@@ -13,7 +13,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Sacramento&family=Satisfy&display=swap"
           rel="stylesheet"
         />
-
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
         {/* Meta Tags */}
         <meta name="theme-color" content="black" />
         <meta

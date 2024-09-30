@@ -16,7 +16,7 @@ export default function Hero() {
   }, [inView, setIsHeroInView]);
 
   return (
-    <div className="relative w-full h-[50vh] md:h-[50vh] lg:h-[70vh]">
+    <div className="relative w-full h-[50vh] md:h-[50vh] lg:h-[70vh] font-sans">
       {/* Background Image */}
       <Image
         src="/home.webp"
@@ -29,27 +29,27 @@ export default function Hero() {
       />
 
       {/* Overlay Content */}
-      <div className="absolute inset-0 flex items-start sm:items-center justify-center text-white sm:mb-8">
+      <div className="absolute inset-0 flex items-start md:items-center justify-center text-white md:mb-8">
         {/* Responsive Container */}
-        <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-center sm:pr-52 h-full">
+        <div className="flex flex-col items-center  md:items-center md:justify-center  h-full">
           {/* Logo */}
-          <div className="mb-2 xs:mb-2 sm:mb-0 sm:mr-0">
+          <div className="mb-0 xs:mb-2 sm:mb-[-16px] w-full flex justify-center ">
             <Image
               ref={ref}
               src="/logoBig.webp"
               alt="Logo"
               width={600}
               height={600}
-              className="w-72 h-44 xxs:h-48 mr-10 sm:w-full sm:h-full"
+              className="w-72 h-44 xxs:h-48 md:h-full md:w-[40vh] mr-10 lg:h-80 lg:w-[30rem]"
             />
           </div>
 
           {/* Text Content */}
-          <div className="text-center sm:text-left mx-2 xs:mx-6 h-full flex flex-col xs:justify-start justify-center mb-[25px]">
-            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ">
+          <div className="text-center mx-2 xs:mx-6 h-full flex flex-col xs:justify-start justify-center mb-[25px] md:mb-0 sm:justify-center items-center w-full xl:w-3/4 sm:space-y-4 md:space-y-4 xl:space-y-8 md:w-5/6 text-shadow-custom">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ">
               A Space for Great Coffee and Even Better Conversations
             </h1>
-            <p className="mt-2 text-sm sm:text-lg md:text-xl lg:text-2xl leading-relaxed ">
+            <p className="mt-2 text-sm sm:text-lg md:text-xl lg:text-2xl leading-relaxed w-[95%] sm:w-5/6 text-center">
               High quality bean juice, all naturally derived energy drinks & more! Come make a memory with us.
             </p>
           </div>
