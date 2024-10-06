@@ -11,6 +11,7 @@ module.exports = {
         'custom': '7px 4px 5px black, -5px -1px 5px black, 0 0 0.3em black',
       },
       screens: {
+        ls: '490px', 
         xs: '425px', 
         xxs: '376px', 
       },
