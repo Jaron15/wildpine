@@ -20,14 +20,14 @@ export default function CustomCarousel() {
   ];
 
   return (
-    <div className="carousel-container max-w-7xl mx-auto w-11/12 h-[30vh] xs:h-[32vh] ls:h-[35vh] ls:w-[80%] sm:h-[40vh] sm:w-[74%] md:h-[43vh] md:w-[70vh] lg:h-[450px] lg:w-[760px] ">
+    <div className="carousel-container max-w-7xl mx-auto w-11/12 h-[30vh] xs:h-[32vh] ls:h-[35vh] ls:w-[80%] sm:h-[40vh] md:h-[43vh]
+lg:h-[42.5rem] sm:w-[74%]  md:w-[70vh]  lg:w-[89%] xl:w-[70rem] ">
       <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}  
         // autoplay={{
         //   delay: 2000,  // Time between slides (in milliseconds)
         //   disableOnInteraction: false,  // Autoplay will not be paused when you interact with it
         // }}
-
         spaceBetween={5}
         slidesPerView={1.7}  // Adjust this to preview adjacent slides
         loop={true}

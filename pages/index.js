@@ -6,6 +6,7 @@ import { useContext, useEffect } from 'react';
 import { ScrollContext } from '../components/ScrollContext';
 import { useInView } from 'react-intersection-observer';
 import Carousel from "@/components/Carousel";
+import AboutSection from "@/components/AboutSection";
 
 
 const geistSans = localFont({
@@ -31,18 +32,19 @@ export default function Home() {
       {/* Hero Section */}
         <Hero />
       {/* Main Content */}
-      <main className="flex-grow flex flex-col gap-8 items-center  bg-[#EAE0D6]">
+      <main className="flex-grow flex flex-col gap-8 items-center bg-[#EAE0D6]">
         
  {/* Grid for Cards */}
- <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-9 justify-items-center mt-[-20px] z-20">
-{cardItems.map((item, index) => (
+ <div className="w-full flex  justify-center gap-x-4 lg:gap-x-8 mt-[-20px] z-20 mx-auto sm:px-8 lg:px-16">
+ {cardItems.map((item, index) => (
    <Card key={index} title={item.title} description={item.description}  />
 ))}
         </div>
  <Carousel />
 
+<AboutSection />
       {/* this is for testing the nav effects when scrolled past hero TEMPORARY */}
- <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-9 justify-items-center mt-[-20px] z-20">
+ {/* <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-9 justify-items-center mt-[-20px] z-20">
 {cardItems.map((item, index) => (
    <Card key={index} title={item.title} description={item.description}  />
 ))}
@@ -61,7 +63,7 @@ export default function Home() {
 {cardItems.map((item, index) => (
    <Card key={index} title={item.title} description={item.description}  />
 ))}
-        </div>
+        </div> */}
         {/* this is for testing the nav effects when scrolled past hero TEMPORARY */}
 
 
