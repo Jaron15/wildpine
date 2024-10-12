@@ -20,8 +20,8 @@ export default function CustomCarousel() {
   ];
 
   return (
-    <div className="carousel-container max-w-7xl mx-auto w-11/12 h-[30vh] xs:h-[32vh] ls:h-[35vh] ls:w-[80%] sm:h-[40vh] md:h-[43vh]
-lg:h-[42.5rem] sm:w-[74%]  md:w-[70vh]  lg:w-[89%] xl:w-[70rem] ">
+    <div className="carousel-container  mx-auto w-11/12 h-[30vh] xs:h-[32vh] ls:h-[35vh] ls:w-[80%] sm:h-[40vh] md:h-[43vh]
+lg:h-[42.5rem] sm:w-[74%]  md:w-[70vh]  lg:w-[89%] xl:w-[70rem] 2xl:w-[111vh] 2xl:h-[69vh] ">
       <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}  
         // autoplay={{

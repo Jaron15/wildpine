@@ -16,7 +16,7 @@ export default function Hero() {
   }, [inView, setIsHeroInView]);
 
   return (
-    <div className="relative w-full h-[20.7rem] md:h-[25.5rem] lg:h-[40rem] font-sans">
+    <div className="relative w-full h-[20.7rem] sm:h-[23rem] md:h-[25.5rem] lg:h-[40rem] 2xl:h-[40rem] font-sans">
       {/* Background Image */}
       <Image
         src="/home.webp"
@@ -45,11 +45,11 @@ export default function Hero() {
           </div>
 
           {/* Text Content */}
-          <div className="text-center mx-2 xs:mx-6 h-full flex flex-col xs:justify-start justify-center mb-[25px] md:mb-0 sm:justify-center items-center w-full xl:w-3/4 sm:space-y-1 md:space-y-4 xl:space-y-8 md:w-5/6 text-shadow-custom">
-            <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ">
+          <div className="text-center mx-2 xs:mx-6 h-full flex flex-col xs:justify-start justify-center mb-[25px] md:mb-0 sm:justify-center items-center w-full xl:w-3/4 sm:space-y-1 md:space-y-4 xl:space-y-8 2xl:space-y-12 md:w-5/6 text-shadow-custom">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold leading-tight ">
               A Space for Great Coffee and Even Better Conversations
             </h1>
-            <p className="mt-2 text-sm sm:text-lg md:text-xl lg:text-2xl leading-relaxed w-[95%] sm:w-5/6 text-center">
+            <p className="mt-2 text-sm sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl leading-relaxed w-[95%] sm:w-5/6 text-center">
               High quality bean juice, all naturally derived energy drinks & more! Come make a memory with us.
             </p>
           </div>

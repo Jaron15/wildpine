@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutSection = () => {
     return (
-      <section className="pb-10 px-4 font-sans">
+      <section className="pb-10 px-4 font-sans text-black">
         <div className="max-w-screen-lg mx-auto">
           <div className="text-center">
             <div className="relative inline-block"> 
