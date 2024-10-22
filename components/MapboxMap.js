@@ -1,34 +1,29 @@
-import { useEffect, useRef } from 'react';
-import mapboxgl from 'mapbox-gl';
+import React from 'react';
+import Map, { Marker } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
-mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
-
-export default function MapboxMap() {
-  const mapContainer = useRef(null);
-
-  useEffect(() => {
-    const map = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [-112.28087722374462, 33.668897235094754], // Lng, Lat
-      zoom: 14,
-    });
-
-    // Ensure the marker is correctly aligned with the map projection
-    const marker = new mapboxgl.Marker({ color: 'red' })
-      .setLngLat([-112.28087722374462, 33.668897235094754])
-      .addTo(map);
-
-    map.on('load', () => {
-      map.resize(); // Ensure the map resizes correctly when loaded
-    });
-
-    return () => map.remove(); // Clean up on unmount
-  }, []);
+const MapboxMap = () => {
+  const accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
+  const initialViewState = {
+    longitude: -112.28087722374462,
+    latitude: 33.668897235094754,
+    zoom: 12,
+  };
 
   return (
-    <div className="w-full h-full border">
-      <div ref={mapContainer} style={{ width: '100%', height: '100%'}} />
-    </div>
+    <Map
+      initialViewState={initialViewState}
+      mapboxAccessToken={accessToken}
+      mapStyle="mapbox://styles/mapbox/streets-v11"
+      style={{ width: '100%', height: '400px' }}
+    >
+      <Marker 
+        longitude={-112.28087722374462} 
+        latitude={33.668897235094754} 
+        color="red" 
+      />
+    </Map>
   );
-}
+};
+
+export default MapboxMap;
