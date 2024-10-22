@@ -7,7 +7,7 @@ const AboutSection = () => {
         <div className="max-w-screen-lg mx-auto">
           <div className="text-center">
             <div className="relative inline-block"> 
-              <h2 className="text-4xl text-center font-bold">About Us</h2>
+              <h2 className="text-4xl text-center font-bold">About WPCC</h2>
             </div>
           </div>
           <div className='w-full md:w-[95%] lg:w-full flex flex-col mx-auto '>
