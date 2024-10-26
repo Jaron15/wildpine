@@ -16,8 +16,10 @@ module.exports = {
         xxs: '376px', 
       },
       colors: {
-        background: "var(--background)",
+        background: "#EAE0D6",
         foreground: "var(--foreground)",
+        dark: "#5A4033",
+        grn: "#6B705C",
       },
       fontFamily: {
         sans: ['Raleway', 'ui-sans-serif', 'system-ui'], 

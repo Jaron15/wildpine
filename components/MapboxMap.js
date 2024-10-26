@@ -15,7 +15,7 @@ const MapboxMap = () => {
       initialViewState={initialViewState}
       mapboxAccessToken={accessToken}
       mapStyle="mapbox://styles/mapbox/streets-v11"
-      style={{ width: '100%', height: '400px' }}
+      style={{ width: '100%', height: '100%' }}
     >
       <Marker 
         longitude={-112.28087722374462} 

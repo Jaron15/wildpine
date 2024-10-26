@@ -33,7 +33,7 @@ export default function Home() {
       {/* Hero Section */}
         <Hero />
       {/* Main Content */}
-      <main className="flex-grow flex flex-col gap-8 items-center bg-[#EAE0D6]">
+      <main className="flex-grow flex flex-col gap-8 items-center bg-background">
         
  {/* Grid for Cards */}
  <div className="w-full flex  justify-center gap-x-4 lg:gap-x-8 mt-[-20px] z-20 mx-auto sm:px-8 lg:px-16">

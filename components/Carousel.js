@@ -24,10 +24,10 @@ export default function CustomCarousel() {
 lg:h-[42.5rem] sm:w-[35rem]  md:w-[36.5rem]  lg:w-[89%] xl:w-[70rem] 2xl:w-[111vh] 2xl:h-[69vh] ">
       <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}  
-        // autoplay={{
-        //   delay: 2000,  // Time between slides (in milliseconds)
-        //   disableOnInteraction: false,  // Autoplay will not be paused when you interact with it
-        // }}
+        autoplay={{
+          delay: 2000,  // Time between slides (in milliseconds)
+          disableOnInteraction: false,  // Autoplay will not be paused when you interact with it
+        }}
         spaceBetween={5}
         slidesPerView={1.7}  // Adjust this to preview adjacent slides
         loop={true}
