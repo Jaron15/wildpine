@@ -22,23 +22,23 @@ function SMlinks({x}) {
 
   return (
     <div className={`flex justify-center ${spacingClass} mb-6`}>
-     <a href="https://www.instagram.com/groundedinAZ" target="_blank" className="bg-[#e0cab4] text-2xl border border-grn rounded-full p-2 hover:opacity-90 hover:shadow-[0_0_20px_#8b008b] transition ease-in-out duration-300">
+     <a href="https://www.instagram.com/groundedinAZ" target="_blank" className="bg-slate-100 text-2xl border border-black rounded-full p-2 hover:opacity-90 hover:shadow-[0_0_20px_#8b008b] transition ease-in-out duration-300">
   <IoLogoInstagram className='text-[#CF2872] hover:text-[#CF2872] transition ease-in-out duration-300'/>
 </a>
 
-<a href="mailto:Groundedinaz@gmail.com" className="bg-[#e0cab4] text-2xl border border-grn rounded-full p-2 hover:opacity-90 hover:shadow-[0_0_20px_#8b008b] transition ease-in-out duration-300">
-  <IoIosMail className='text-white hover:text-white transition ease-in-out duration-300' />
+<a href="mailto:Groundedinaz@gmail.com" className="bg-slate-100 text-2xl border border-black rounded-full p-2 hover:opacity-90 hover:shadow-[0_0_20px_#8b008b] transition ease-in-out duration-300">
+  <IoIosMail className='text-black hover:text-white transition ease-in-out duration-300' />
 </a>
 
 <a href="https://g.co/kgs/BC6CMh" target="_blank" className="inline-block">
-  <div className="bg-[#e0cab4] text-2xl border border-grn rounded-full p-2 hover:opacity-90 inline-flex items-center justify-center hover:shadow-[0_0_20px_#8b008b] transition ease-in-out duration-300">
+  <div className="bg-slate-100 text-2xl border border-black rounded-full p-2 hover:opacity-90 inline-flex items-center justify-center hover:shadow-[0_0_20px_#8b008b] transition ease-in-out duration-300">
     <div className="filter grayscale-0 grayscale transition ease-in-out duration-300 hover:grayscale-0">
       <FcGoogle />
     </div>
   </div>
 </a>
 
-<a href="https://www.facebook.com/groundedinAZ" target="_blank" className="bg-[#e0cab4] text-2xl border border-grn rounded-full p-2 hover:opacity-90 text-blue-500 hover:text-blue-500 hover:shadow-[0_0_20px_#8b008b] transition ease-in-out duration-300">
+<a href="https://www.facebook.com/groundedinAZ" target="_blank" className="bg-slate-100 text-2xl border border-black rounded-full p-2 hover:opacity-90 text-blue-500 hover:text-blue-500 hover:shadow-[0_0_20px_#8b008b] transition ease-in-out duration-300">
   <FaFacebookF />
 </a>
 </div>

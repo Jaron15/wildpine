@@ -20,12 +20,16 @@ module.exports = {
         foreground: "var(--foreground)",
         dark: "#5A4033",
         grn: "#6B705C",
+        mute: "#6B705C"
       },
       fontFamily: {
         sans: ['Raleway', 'ui-sans-serif', 'system-ui'], 
         sacramento: ['Sacramento', 'cursive'],
         satisfy: ['Satisfy', 'cursive'],
-      }
+      },
+      backgroundImage: {
+        'wood': "url('../public/wood.webp')",
+      },
     },
   },
   plugins: [

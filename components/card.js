@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card({title, description}) {
   return (
-    <div className="w-[15vh] sm:w-[10.9rem] md:w-[10.8rem] lg:w-[19.9rem] 2xl:w-[35vh] bg-white border border-grn rounded-lg shadow dark:bg-gray-800 dark:border-grn h-[27vh] sm:h-[18.55rem] md:h-[18.65rem] lg:h-[31.3rem] 2xl:h-[55vh] flex flex-col overflow-clip font-sans">
+    <div className="w-[15vh] sm:w-[10.9rem] md:w-[10.8rem] lg:w-[19.9rem] 2xl:w-[35vh] border border-grn  rounded-lg shadow-xl h-[27vh] sm:h-[18.55rem] md:h-[18.65rem] lg:h-[31.3rem] 2xl:h-[55vh] flex flex-col overflow-clip font-sans">
     
         {/* Set height as a percentage of the card */}
         <div className="h-[80%] sm:h-[75%] xl:h-[80%]">
@@ -10,13 +10,13 @@ function Card({title, description}) {
         </div>
      
       {/* Text section takes up the remaining 30% */}
-      <div className="p-0  h-full text-center flex-1 flex flex-col justify-center items-center bg-white  rounded-b-lg ">
+      <div className="p-0  h-full text-center flex-1 flex flex-col justify-center items-center bg-mute rounded-b-lg ">
         <div className='flex justify-center items-center h-full sm:h-1/2 text-center '>
-          <h5 className=" text-xs sm:text-xl lg:text-2xl font-bold tracking-tight text-black ">
+          <h5 className=" text-md sm:text-xl lg:text-2xl font-extrabold tracking-tight text-white ">
             {title}
           </h5>
         </div>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 hidden sm:flex sm:w-3/4 sm:leading-4 lg:leading-6 text-md lg:text-xl">
+        <p className="mb-3 font-normal text-white hidden sm:flex sm:w-3/4 sm:leading-4 lg:leading-6 text-md lg:text-xl">
           {description}
         </p>
       </div>

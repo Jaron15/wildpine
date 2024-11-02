@@ -52,52 +52,57 @@ export default function NavBar() {
                   href="#"
                   className="inline-flex items-center hover:border-b-2 border-black px-1 pt-1 text-sm font-medium text-white"
                 >
-                  Dashboard
+                  Home
                 </a>
                 <a
                   href="#"
                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
                 >
-                  Team
+                  Menu
                 </a>
                 <a
                   href="#"
                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
                 >
-                  Projects
+                  About Us
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-" 
                 >
-                  Calendar
+                  Contact
                 </a>
               </div>
             </div>
-            <div className="absolute  inset-y-0 right-0 flex items-center pr-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <AnimatePresence>
-  {!isHeroInView && (
-    <motion.button
-      key="navbar-logo"
-      type="button"
-      className="relative rounded-full pb-1 text-gray-400 hover:text-gray-500"
+            <div className="absolute inset-y-0 right-0 flex items-center pr-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+  <motion.div
+    key="navbar-logo-container"
+    className="relative rounded-full pb-1 text-gray-400 hover:text-gray-500  h-20 w-20"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: isHeroInView ? 0 : 1 }}
+    transition={{ duration: 0.5 }}
+  >
+    {/* Conditionally render only the inner logo div */}
+    <AnimatePresence>
+    {!isHeroInView && (
+      <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-    >
-      <div className="relative h-20 w-20">
+      className="relative h-20 w-20 ">
         <Image
           src="/wildpinelogo.svg"
           alt="Company Logo"
           fill
           objectFit="contain"
         />
-      </div>
-    </motion.button>
-  )}
-</AnimatePresence>
-            </div>
+      </motion.div>
+    )}
+    </AnimatePresence>
+  </motion.div>
+</div>
+
           </div>
         </div>
 
@@ -106,7 +111,7 @@ export default function NavBar() {
             <DisclosureButton
               as="a"
               href="#"
-              className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
+              className="block border-r-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
             >
               Dashboard
             </DisclosureButton>
@@ -140,7 +145,7 @@ export default function NavBar() {
   initial={{ x: '-100%' }}
   animate={{ x: isSidebarOpen ? '0%' : '-100%' }}
   transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-  className="fixed top-0 left-0 h-full bg-white text-black z-40"
+  className="fixed top-0 left-0 h-full bg-background text-black z-40"
   style={{ width: '80%' }}
 >
   <div className="p-4 text-3xl flex flex-col justify-start w-full h-full items-center pt-28">

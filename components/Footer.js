@@ -7,11 +7,11 @@ import SMlinks from './SMlinks';
 
 const Footer = () => {
   return (
-      <footer className="bg-background p-6 w-full font-sans">
+      <footer className="bg-mute p-6 w-full font-sans">
      
      <SMlinks x={4} />
 
-      <ul className="flex flex-wrap justify-center space-x-4 text-lg mb-6 text-black">
+      <ul className="flex flex-wrap justify-center space-x-4 text-lg mb-6 text-white">
         <li><Link href="/" className="hover:underline">Home</Link></li>
         <li><Link href="/services" className="hover:underline">Services</Link></li>
         <li><Link href="/about" className="hover:underline">About</Link></li>
