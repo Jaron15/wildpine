@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutSection = () => {
     return (
-      <section className="pb-2 sm:pb-10 px-4 font-sans text-black">
+      <section className="pb-2 sm:pb-10 px-4 font-sans text-black mt-8">
         <div className="max-w-screen-lg mx-auto">
           <div className="text-center">
             <div className="relative inline-block"> 
@@ -13,7 +13,7 @@ const AboutSection = () => {
           <div className='w-full md:w-[95%] lg:w-full flex flex-col mx-auto '>
           <div className='bg-gradient-to-r from-grn to- w-1/2 h-0.5 mt-4 mb-2'></div>
           <div className='my-2 sm:my-4 flex flex-col items-center'>
-          <p className="text-lg text-center  mb-2 flex justify-center font-medium">
+          <p className="text-lg text-center  mb-2 flex justify-center md:text-lg lg:text-2xl 2xl:text-3xl sm:!leading-relaxed">
           At Wild Pine Coffee, we believe in more than just great coffee — we create a space for meaningful connections. From our premium, handpicked beans to our naturally derived energy drinks, every cup is crafted with care. Whether you&apos;re catching up with friends or working on your next big idea, our cozy atmosphere is the perfect place to make memories. Stop by, grab a drink, and experience the essence of Wild Pine!
           </p>
           <div className="text-center">
