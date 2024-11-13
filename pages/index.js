@@ -22,9 +22,9 @@ const geistMono = localFont({
 });
 
 const cardItems = [
-  { title: "Coffee", description: "this is the best item on the list and should be the star." },
-  { title: "Tea", description: "this one is tea which will have a better description." },
-  { title: "Coffee", description: "this will actually be food when I get that done ." }
+  { name: "Coffee", title: "Coffee", description: "Expertly crafted coffee brewed from quality beans." },
+  { name: "Tea", title: "Tea & Energy", description: "Refreshing teas and natural energy drinks for every mood." },
+  { name: "food", title: "Food", description: "Freshly made bites to pair perfectly with any drink." }
 ];
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
  {/* Grid for Cards */}
  <div className="w-full flex  justify-center gap-x-4 lg:gap-x-8 mt-[-20px] z-20 mx-auto sm:px-8 lg:px-16">
  {cardItems.map((item, index) => (
-   <Card key={index} title={item.title} description={item.description}  />
+   <Card key={index} name={item.name} title={item.title} description={item.description}  />
 ))}
         </div>
  <Carousel />

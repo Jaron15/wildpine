@@ -15,7 +15,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Disclosure as="nav" className="sticky top-0 z-50 bg-gradient-to-r from-[#5A4033]  to-[#F2D9B1] shadow overflow-clip font-sans text-shadow-custom">
+      <Disclosure as="nav" className="sticky top-0 z-50 bg-[#505344] bg-opacity-90 shadow overflow-clip font-sans text-shadow-custom">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

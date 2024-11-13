@@ -25,7 +25,7 @@ export default function Document() {
         />
 
         {/* Favicon */}
-        <link rel="icon" type="image/svg+xml" href="/wildpinelogo.svg" />
+        <link rel="icon" href="/logopng.png" />
       </Head>
       <body className="antialiased">
         <Main />
