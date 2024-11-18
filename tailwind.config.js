@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      dropShadow: {
+        'neon': '2px 2px 2px rgba(0, 255, 255, 0.8), -2px -2px 2px rgba(255, 20, 147, 0.8)',
+      },
       textShadow: {
         'custom': '7px 4px 5px black, -5px -1px 5px black, 0 0 0.3em black',
       },
@@ -38,6 +41,9 @@ module.exports = {
         '.text-shadow-custom': {
           textShadow: '4px 3px 5px black, -2px -1px 5px black, 0 0 0.3em black',
         },
+        '.drop-shadow-neon': {
+          dropShadow: '2px 2px 2px rgba(0, 255, 255, 0.8), -2px -2px 2px rgba(255, 20, 147, 0.8)'
+        }
       })
     },
   ],

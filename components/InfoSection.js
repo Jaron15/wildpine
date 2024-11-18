@@ -18,7 +18,7 @@ function InfoSection() {
           </div>
           <div className="flex flex-col text-center  items-center">
             <h3 className="text-2xl font-semibold">Phone</h3>
-            <a href="tel:+13055555555" className="text-blue-600">(123) 456-7890</a>
+            <a href="tel:+14806253827" className="text-blue-600">(480) 625-3827</a>
           </div>
           <div className="flex flex-col text-center  items-center">
             <h3 className="text-2xl font-semibold text-center">Location</h3>
