@@ -7,6 +7,7 @@ import HamburgerIcon from './HamburgerIcon'
 import { useState } from 'react'
 import Image from 'next/image'
 import SMlinks from './SMlinks';
+import Link from 'next/link';
 
 export default function NavBar() {
   const { isHeroInView } = useContext(ScrollContext);
@@ -52,30 +53,30 @@ export default function NavBar() {
         </div>
 
         <div className="hidden sm:justify-center sm:flex sm:flex-1 sm:space-x-8 ">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center hover:border-b-2 border-black px-1 pt-1 text-sm font-medium text-white"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/menu"
             className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
           >
             Menu
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
           >
             About Us
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
       <div className="absolute inset-y-0 right-0 flex items-center pr-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
