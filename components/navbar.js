@@ -53,13 +53,13 @@ export default function NavBar() {
 
         <div className="hidden sm:justify-center sm:flex sm:flex-1 sm:space-x-8 ">
           <a
-            href="#"
+            href="/"
             className="inline-flex items-center hover:border-b-2 border-black px-1 pt-1 text-sm font-medium text-white"
           >
             Home
           </a>
           <a
-            href="#"
+            href="/menu"
             className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
           >
             Menu
