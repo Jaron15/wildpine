@@ -26,6 +26,12 @@ export default function Document() {
 
         {/* Favicon */}
         <link rel="icon" href="/logopng.png" />
+        {/* Apple Touch Icon */}
+        <link rel="apple-touch-icon" href="/logopng.png" />
+
+        {/* Android Chrome Icon */}
+        <link rel="icon" href="/logopng.png" />
+
       </Head>
       <body className="antialiased">
         <Main />
