@@ -123,8 +123,8 @@ export default function NavBar() {
 >
   <div className="p-4 text-3xl flex flex-col justify-start w-full h-full items-center pt-28">
     <ul className="space-y-10 text-center">
-      <li className="mb-2">Home</li>
-      <li className="mb-2">Menu</li>
+      <li className="mb-2"><Link href='/'>Home</Link></li>
+      <li className="mb-2"><Link href='/menu'>Menu</Link></li>
       <li className="mb-2">About us</li>
       <li className="mb-2">Contact</li>
     </ul>

@@ -229,37 +229,60 @@ function Menu() {
     {
       category: "Food",
       subcategory: "Snackies",
-      items: [
+      subcategories: [
         {
-          name: "Bagel & Cream Cheese",
-          description: "Plain or Everything. Gluten Free + 1.50. Dairy Free Cream Cheese + 1.00.",
-          sizes: [{ size: "Single", price: "4.00" }]
-        },
-        {
-          name: "Waffles on a Stick",
-          description: "3 Waffles with Powdered Sugar & Syrup. Served until 1pm.",
-          sizes: [{ size: "Single", price: "7.50" }]
-        },
-        {
-          name: "Breakfast Sammy’s",
-          description: "Egg and Cheese, Sausage Egg and Cheese, Bacon Egg and Cheese, Chicken Egg and Cheese. Swap for a Bagel + 1.00.",
-          sizes: [
-            { size: "Egg and Cheese", price: "5.75" },
-            { size: "Sausage, Egg and Cheese", price: "6.75" },
-            { size: "Bacon, Egg and Cheese", price: "6.75" },
-            { size: "Chicken, Egg and Cheese", price: "7.75" }
+          name: "Breakfast",
+          items: [
+            {
+              name: "Bagel & Cream Cheese",
+              description: "Plain or Everything. Gluten Free + 1.50. Dairy Free Cream Cheese + 1.00.",
+              sizes: [{ size: "Single", price: "4.00" }]
+            },
+            {
+              name: "Waffles on a Stick",
+              description: "3 Waffles with Powdered Sugar & Syrup. Served until 1pm.",
+              sizes: [{ size: "Single", price: "7.50" }]
+            },
+            {
+              name: "Egg and Cheese Sandwich",
+              description: "Egg and Cheese on your choice of bread.",
+              sizes: [{ size: "Single", price: "5.75" }]
+            },
+            {
+              name: "Sausage, Egg and Cheese Sandwich",
+              description: "Sausage, Egg and Cheese on your choice of bread.",
+              sizes: [{ size: "Single", price: "6.75" }]
+            },
+            {
+              name: "Bacon, Egg and Cheese Sandwich",
+              description: "Bacon, Egg and Cheese on your choice of bread.",
+              sizes: [{ size: "Single", price: "6.75" }]
+            },
+            {
+              name: "Chicken, Egg and Cheese Sandwich",
+              description: "Chicken, Egg and Cheese on your choice of bread.",
+              sizes: [{ size: "Single", price: "7.75" }]
+            }
           ]
         },
         {
-          name: "Lunch Sammy’s",
-          description: "Turkey Pesto: Sliced Turkey, Pesto, Bacon, Provolone Cheese. Chicken Special: Sliced Chicken, Cucumbers, Boursin Cheese.",
-          sizes: [
-            { size: "Turkey Pesto", price: "8.75" },
-            { size: "Chicken Special", price: "8.75" }
+          name: "Lunch",
+          items: [
+            {
+              name: "Turkey Pesto Sandwich",
+              description: "Sliced Turkey, Pesto, Bacon, Provolone Cheese.",
+              sizes: [{ size: "Single", price: "8.75" }]
+            },
+            {
+              name: "Chicken Special Sandwich",
+              description: "Sliced Chicken, Cucumbers, Boursin Cheese.",
+              sizes: [{ size: "Single", price: "8.75" }]
+            }
           ]
         }
       ]
     }
+    
   ];
   
 
@@ -267,19 +290,37 @@ function Menu() {
     <div className="w-full flex flex-col items-center py-6 bg-background font-sans">
       <MenuIcons />
         {/* Render All Categories and Subcategories */}
-      {menuItems.map((category, categoryIndex) => (
-        <div key={categoryIndex} className="w-full max-w-5xl px-4 sm:px-6 mb-8">
+        {menuItems.map((category, categoryIndex) => (
+  <div key={categoryIndex} className="w-full max-w-5xl px-4 sm:px-6 mb-8">
+    {/* Category Header */}
+    <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 text-center">{category.subcategory}</h1>
+
+    {/* Check if subcategories exist */}
+    {category.subcategories ? (
+      category.subcategories.map((subcategory, subIndex) => (
+        <div key={subIndex} className="mb-6">
           {/* Subcategory Header */}
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-800 mb-4 text-center">{category.subcategory}</h2>
+          <h2 className="text-3xl font-semibold text-gray-700 mb-4">{subcategory.name}</h2>
 
           {/* Subcategory Items */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3">
-            {category.items.map((item, itemIndex) => (
+            {subcategory.items.map((item, itemIndex) => (
               <MenuItem key={itemIndex} item={item} />
             ))}
           </div>
         </div>
-      ))}
+      ))
+    ) : (
+      /* Render items directly if no subcategories */
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3">
+        {category.items.map((item, itemIndex) => (
+          <MenuItem key={itemIndex} item={item} />
+        ))}
+      </div>
+    )}
+  </div>
+))}
+
     </div>
   );
 };

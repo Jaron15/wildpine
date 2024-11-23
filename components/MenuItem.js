@@ -7,10 +7,10 @@ export default function MenuItem({ item }) {
   return (
     <div className="max-w-3xl w-full flex justify-between items-center border border-gray-300 rounded-lg p-4 shadow-md bg-white">
       {/* Left Section: Name and Description */}
-      <div className="flex flex-col">
+      <div className="flex flex-col  w-[70%]">
         <h3 className="text-lg sm:text-xl font-bold text-gray-800">{item.name}</h3>
         {item.description && (
-          <p className="text-sm sm:text-base text-gray-600 mt-1">{item.description}</p>
+          <p className="text-sm sm:text-base  text-gray-600 mt-1">{item.description}</p>
         )}
       </div>
 
