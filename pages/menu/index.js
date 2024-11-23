@@ -1,11 +1,9 @@
 import MenuIcons from '@/components/MenuIcons'
 import MenuItem from '@/components/MenuItem'
-import React from 'react'
+import React, { useState } from 'react'
 
 function Menu() {
-
   const menuItems = [
-    
     {
       category: "Coffee",
       subcategory: "Specialty Lattes",
@@ -286,11 +284,27 @@ function Menu() {
   ];
   
 
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const toggleFilter = (selection) => {
+    setSelectedFilters((prevFilters) =>
+      prevFilters.includes(selection)
+        ? prevFilters.filter((f) => f !== selection) // Remove filter if it's already selected
+        : [...prevFilters, selection] // Add filter if not selected
+    );
+  };
+
+  const filteredMenu =
+    selectedFilters.length === 0
+      ? menuItems // Show all if no filters selected
+      : menuItems.filter((category) => selectedFilters.includes(category.category));
+
+
   return (
     <div className="w-full flex flex-col items-center py-6 bg-background font-sans">
-      <MenuIcons />
+       {/* Filter Buttons */}
+      <MenuIcons selections={selectedFilters} toggleFilter={toggleFilter}/>
         {/* Render All Categories and Subcategories */}
-        {menuItems.map((category, categoryIndex) => (
+        {filteredMenu.map((category, categoryIndex) => (
   <div key={categoryIndex} className="w-full max-w-5xl px-4 sm:px-6 mb-8">
     {/* Category Header */}
     <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 text-center">{category.subcategory}</h1>

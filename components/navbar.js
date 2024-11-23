@@ -123,10 +123,10 @@ export default function NavBar() {
 >
   <div className="p-4 text-3xl flex flex-col justify-start w-full h-full items-center pt-28">
     <ul className="space-y-10 text-center">
-      <li className="mb-2"><Link href='/'>Home</Link></li>
-      <li className="mb-2"><Link href='/menu'>Menu</Link></li>
-      <li className="mb-2">About us</li>
-      <li className="mb-2">Contact</li>
+      <li className="mb-2" ><Link href='/' onClick={toggleSidebar}>Home</Link></li>
+      <li className="mb-2"><Link href='/menu' onClick={toggleSidebar}>Menu</Link></li>
+      <li className="mb-2"> <Link href='/' onClick={toggleSidebar}>About us</Link></li>
+      <li className="mb-2"><Link href='/' onClick={toggleSidebar}>Contact</Link></li>
     </ul>
     <div className="border-t border-gray-400 w-5/6 my-6 "></div>
     <SMlinks x={4}/>

@@ -1,9 +1,7 @@
 import React from 'react';
 
 export default function MenuItem({ item }) {
-    console.log(item);
-    
-    
+
   return (
     <div className="max-w-3xl w-full flex justify-between items-center border border-gray-300 rounded-lg p-4 shadow-md bg-white">
       {/* Left Section: Name and Description */}
