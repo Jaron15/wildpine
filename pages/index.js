@@ -24,7 +24,7 @@ const geistMono = localFont({
 const cardItems = [
   { name: "Coffee", title: "Coffee", description: "Expertly crafted coffee brewed from quality beans." },
   { name: "Tea", title: "Tea & Energy", description: "Refreshing teas and natural energy drinks for every mood." },
-  { name: "food", title: "Food", description: "Freshly made bites to pair perfectly with any drink." }
+  { name: "Food", title: "Food", description: "Freshly made bites to pair perfectly with any drink." }
 ];
 
 export default function Home() {

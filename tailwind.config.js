@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      rotate: {
+        '15': '-15deg',
+      },
       dropShadow: {
         'neon': '2px 2px 2px rgba(0, 255, 255, 0.8), -2px -2px 2px rgba(255, 20, 147, 0.8)',
       },

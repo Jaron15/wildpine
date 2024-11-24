@@ -1,8 +1,19 @@
 import React from 'react';
+import { useRouter } from "next/router";
+
 
 function Card({name, title, description}) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    const filters = name === "Tea" ? "Tea,Energy" : name;
+    router.push(`/menu?filter=${filters}`);
+  };
+
+
   return (
-    <div className="w-[15vh] sm:w-[10.9rem] md:w-[10.8rem] lg:w-[19.9rem] 2xl:w-[35vh] border border-grn  rounded-lg shadow-xl h-[27vh] sm:h-[18.55rem] md:h-[18.65rem] lg:h-[31.3rem] 2xl:h-[55vh] flex flex-col overflow-clip font-sans cursor-pointer">
+    <div className="w-[15vh] sm:w-[10.9rem] md:w-[10.8rem] lg:w-[19.9rem] 2xl:w-[35vh] border border-grn  rounded-lg shadow-xl h-[27vh] sm:h-[18.55rem] md:h-[18.65rem] lg:h-[31.3rem] 2xl:h-[55vh] flex flex-col overflow-clip font-sans cursor-pointer"
+    onClick={handleClick}>
     
         {/* Set height as a percentage of the card */}
         <div className="h-[80%] sm:h-[75%] xl:h-[80%]">

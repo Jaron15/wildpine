@@ -1,6 +1,7 @@
 import MenuIcons from '@/components/MenuIcons'
 import MenuItem from '@/components/MenuItem'
-import React, { useState } from 'react'
+import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react'
 
 function Menu() {
   const menuItems = [
@@ -243,22 +244,22 @@ function Menu() {
             },
             {
               name: "Egg and Cheese Sandwich",
-              description: "Egg and Cheese on your choice of bread.",
+              description: "Egg and Cheese on an English Muffin.",
               sizes: [{ size: "Single", price: "5.75" }]
             },
             {
               name: "Sausage, Egg and Cheese Sandwich",
-              description: "Sausage, Egg and Cheese on your choice of bread.",
+              description: "Sausage, Egg and Cheese on an English Muffin.",
               sizes: [{ size: "Single", price: "6.75" }]
             },
             {
               name: "Bacon, Egg and Cheese Sandwich",
-              description: "Bacon, Egg and Cheese on your choice of bread.",
+              description: "Bacon, Egg and Cheese on an English Muffin.",
               sizes: [{ size: "Single", price: "6.75" }]
             },
             {
               name: "Chicken, Egg and Cheese Sandwich",
-              description: "Chicken, Egg and Cheese on your choice of bread.",
+              description: "Chicken, Egg and Cheese on an English Muffin.",
               sizes: [{ size: "Single", price: "7.75" }]
             }
           ]
@@ -282,7 +283,15 @@ function Menu() {
     }
     
   ];
-  
+  const router = useRouter();
+  const { filter } = router.query; 
+  useEffect(() => {
+    if (filter) {
+      setSelectedFilters(filter.split(","));
+    }
+  }, [filter]);
+
+
 
   const [selectedFilters, setSelectedFilters] = useState([]);
   const toggleFilter = (selection) => {
@@ -300,7 +309,7 @@ function Menu() {
 
 
   return (
-    <div className="w-full flex flex-col items-center py-6 bg-background font-sans">
+    <div className="w-full flex flex-col items-center py-6 bg-background font-sans min-h-screen">
        {/* Filter Buttons */}
       <MenuIcons selections={selectedFilters} toggleFilter={toggleFilter}/>
         {/* Render All Categories and Subcategories */}

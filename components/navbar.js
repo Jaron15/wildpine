@@ -8,8 +8,10 @@ import { useState } from 'react'
 import Image from 'next/image'
 import SMlinks from './SMlinks';
 import Link from 'next/link';
+import { useRouter } from "next/router";
 
 export default function NavBar() {
+  const router = useRouter()
   const { isHeroInView } = useContext(ScrollContext);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -61,19 +63,19 @@ export default function NavBar() {
           </Link>
           <Link
             href="/menu"
-            className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
+            className="inline-flex items-center hover:border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
           >
             Menu
           </Link>
           <Link
-            href="#"
-            className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
+            href="/"
+            className="inline-flex items-center hover:border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
           >
             About Us
           </Link>
           <Link
-            href="#"
-            className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
+            href="/"
+            className="inline-flex items-center hover:border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-black hover:text-"
           >
             Contact
           </Link>
@@ -84,12 +86,12 @@ export default function NavBar() {
           key="navbar-logo-container"
           className="relative rounded-full pb-1 text-gray-400 hover:text-gray-500  h-20 w-20"
           initial={{ opacity: 0 }}
-          animate={{ opacity: isHeroInView ? 0 : 1 }}
+          animate={{ opacity: !isHeroInView || router.pathname !== "/" ? 1 : 0 }}
           transition={{ duration: 0.5 }}
         >
           {/* Conditionally render only the inner logo div */}
           <AnimatePresence>
-            {!isHeroInView && (
+            {(!isHeroInView || router.pathname !== "/") && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
